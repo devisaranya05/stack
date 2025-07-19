@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Product{
+    
+private :
+
+double price;
+int stock;
+
+
+public :
+
+string product_name;
+string category;
+
+
+Product(string pn, string cat, double p,int st){
+product_name = pn;
+category = cat;
+price = p;
+stock = st;
+}
+
+
+void setprice(double amount){
+ price = amount;
+}
+
+void setstock(int rate){
+stock = rate;
+}
+
+double getprice(){
+return price;
+}
+
+int getstock(){
+return stock;
+}
+
+void display(){
+    cout << "Product_name: " << product_name<< endl;
+    cout <<"Category: " << category << endl;
+    cout <<"Price: " << price << endl;
+    cout <<"stock: "<< stock << endl;
+}
+};
+
+
+int main(){
+Product P1("Car", "Vehicle", 10000, 3450);
+cout << "Before setting price and stock" << endl;
+P1.display();
+P1.setprice(55000);
+P1.setstock(76);
+cout<< "After setting price and stock" << endl;
+P1.display();
+
+}
